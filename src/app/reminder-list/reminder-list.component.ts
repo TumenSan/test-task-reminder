@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Reminder } from '../models/reminder.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reminder-list',
@@ -11,7 +12,11 @@ import { Reminder } from '../models/reminder.model';
 export class ReminderListComponent {
   reminders: Reminder[] = [];
 
-  constructor() {
+  constructor(private router: Router) {
 
+  }
+
+  openReminderForm(reminder: Reminder) {
+    this.router.navigate(['/reminder']);
   }
 }
