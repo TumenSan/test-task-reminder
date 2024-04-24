@@ -9,7 +9,7 @@ import { Reminder } from '../models/reminder.model';
   styleUrl: './reminder-list.component.css'
 })
 export class ReminderListComponent {
-  reminders: Reminder[] = []; // Здесь будут ваши тестовые данные
+  reminders: Reminder[] = [];
 
   constructor() {
 
