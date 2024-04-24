@@ -8,6 +8,11 @@
     </tr>
   </thead>
   <tbody>
-      <td>reminder.status.name</td>
+      <tr *ngFor="let reminder of reminders" (dblclick)="openReminderForm(reminder)">
+        <td>{{ reminder.status.name }}</td>
+        <td>{{ reminder.shortDescription }}</td>
+        <td>{{ reminder.creationDateTime }}</td>
+        <td>{{ reminder.completionDateTime }}</td>
+      </tr>
   </tbody>
 </table>
