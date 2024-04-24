@@ -17,6 +17,6 @@ export class ReminderFormComponent {
   }
 
   goBack() {
-    this.router.navigate(['/reminders']);
+    this.router.navigate(['/reminder']);
   }
 }
