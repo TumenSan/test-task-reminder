@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './reminder-form.component.css'
 })
 export class ReminderFormComponent {
-  reminder: Reminder[] = [];
+  reminder!: Reminder;
 
   constructor(private route: ActivatedRoute, private router: Router) {
     // Получение напоминания из роута и инициализация данных для редактирования

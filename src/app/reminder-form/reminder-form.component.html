@@ -1,1 +1,23 @@
-<p>reminder-form works!</p>
+<form>
+  <div>
+    <label>Дата и время создания:</label>
+    <span>{{ reminder.creationDateTime }}</span>
+  </div>
+  <div>
+    <label>Дата и время выполнения:</label>
+    <span>{{ reminder.completionDateTime }}</span>
+  </div>
+  <div>
+    <label>Статус:</label>
+    <span>{{ reminder.status.name }}</span>
+  </div>
+  <div>
+    <label>Краткое описание:</label>
+    <span>{{ reminder.shortDescription }}</span>
+  </div>
+  <div>
+    <label>Полное описание:</label>
+    <textarea></textarea>
+  </div>
+  <button (click)="goBack()">Назад</button>
+</form>
