@@ -16,6 +16,13 @@ export class ReminderFormComponent {
     // Получение напоминания из роута и инициализация данных для редактирования
   }
 
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      const id = params['id'];
+      console.log('id: ', id);
+    });
+  }
+
   goBack() {
     this.router.navigate(['/reminder']);
   }
