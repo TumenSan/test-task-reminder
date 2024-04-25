@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Reminder } from '../../models/reminder.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ReminderService } from '../../services/reminder.service';
@@ -6,7 +7,7 @@ import { ReminderService } from '../../services/reminder.service';
 @Component({
   selector: 'app-reminder-form',
   standalone: true,
-  imports: [],
+  imports: [ FormsModule ],
   templateUrl: './reminder-form.component.html',
   styleUrl: './reminder-form.component.css'
 })
@@ -41,8 +42,20 @@ export class ReminderFormComponent {
         console.error('Error subscribing to route params:', error);
       }
     });
-  }  
+  }
   
+  saveChanges() {
+    this.reminderService.saveReminder(this.reminder).subscribe({
+      next: (savedReminder: Reminder) => {
+        console.log('Changes saved successfully:', savedReminder);
+        // Добавить перенаправление на другую страницу после успешного сохранения?
+        // this.router.navigate(['/reminder']);
+      },
+      error: (error: any) => {
+        console.error('Error saving changes:', error);
+      }
+    });
+  }
 
   goBack() {
     this.router.navigate(['/reminder']);

@@ -1,23 +1,24 @@
 <form>
   <div>
     <label>Дата и время создания:</label>
-    <span>{{ reminder.creationDateTime }}</span>
+    <input type="text" [(ngModel)]="reminder.creationDateTime" name="creationDateTime">
   </div>
   <div>
     <label>Дата и время выполнения:</label>
-    <span>{{ reminder.completionDateTime }}</span>
+    <input type="text" [(ngModel)]="reminder.completionDateTime" name="completionDateTime">
   </div>
   <div>
     <label>Статус:</label>
-    <span>{{ reminder.status.name }}</span>
+    <input type="text" [(ngModel)]="reminder.status.name" name="status">
   </div>
   <div>
     <label>Краткое описание:</label>
-    <span>{{ reminder.shortDescription }}</span>
+    <input type="text" [(ngModel)]="reminder.shortDescription" name="shortDescription">
   </div>
   <div>
     <label>Полное описание:</label>
-    <textarea></textarea>
+    <textarea [(ngModel)]="reminder.fullDescription" name="fullDescription"></textarea>
   </div>
+  <button (click)="saveChanges()">Сохранить</button>
   <button (click)="goBack()">Назад</button>
 </form>

@@ -40,4 +40,25 @@ export class ReminderService {
 
     return of(reminder ? reminder : null);
   }
+
+  // Метод для сохранения или обновления напоминания
+  saveReminder(reminder: Reminder): Observable<Reminder> {
+    if (reminder.id) {
+      // Если у напоминания уже есть id, это обновление существующего напоминания
+      const index = this.reminders.findIndex(r => r.id === reminder.id);
+      if (index !== -1) {
+        this.reminders[index] = reminder;
+      }
+    } else {
+      // Если у напоминания нет идентификатора, это создание нового напоминания
+      reminder.id = this.generateUniqueId();
+      this.reminders.push(reminder);
+    }
+    return of(reminder);
+  }
+
+  // Метод для генерации id
+  private generateUniqueId(): number {
+    return this.reminders.length > 0 ? Math.max(...this.reminders.map(r => r.id)) + 1 : 1;
+  }
 }
