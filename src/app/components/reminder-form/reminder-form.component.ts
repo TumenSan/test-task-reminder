@@ -48,8 +48,7 @@ export class ReminderFormComponent {
     this.reminderService.saveReminder(this.reminder).subscribe({
       next: (savedReminder: Reminder) => {
         console.log('Changes saved successfully:', savedReminder);
-        // Добавить перенаправление на другую страницу после успешного сохранения?
-        // this.router.navigate(['/reminder']);
+        this.router.navigate(['/reminder']);
       },
       error: (error: any) => {
         console.error('Error saving changes:', error);

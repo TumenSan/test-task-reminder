@@ -22,6 +22,30 @@ export class ReminderService {
       fullDescription: 'Купить продукты',
       creationDateTime: new Date('April 24, 2024 10:00:00'),
       completionDateTime: new Date('April 25, 2024 10:00:00')
+    },
+    {
+      id: 3,
+      status: { name: 'Исполнен' },
+      shortDescription: 'Сделать уроки',
+      fullDescription: 'Купить продукты',
+      creationDateTime: new Date('April 24, 2024 10:00:00'),
+      completionDateTime: new Date('April 25, 2024 10:00:00')
+    },
+    {
+      id: 4,
+      status: { name: 'Исполнен' },
+      shortDescription: 'Сделать уроки',
+      fullDescription: 'Купить продукты',
+      creationDateTime: new Date('April 24, 2024 10:00:00'),
+      completionDateTime: new Date('April 25, 2024 10:00:00')
+    },
+    {
+      id: 5,
+      status: { name: 'Исполнен' },
+      shortDescription: 'Сделать уроки',
+      fullDescription: 'Купить продукты',
+      creationDateTime: new Date('April 24, 2024 10:00:00'),
+      completionDateTime: new Date('April 25, 2024 10:00:00')
     }
   ];
 
