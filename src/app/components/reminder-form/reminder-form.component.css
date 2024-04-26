@@ -1,5 +1,5 @@
 form {
-  max-width: 400px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -7,35 +7,53 @@ form {
   background-color: #f9f9f9;
 }
 
-form div {
+.row {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
-form label {
+.row > div {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.full-width {
+  flex-basis: 100%;
+}
+
+label {
   display: block;
   font-weight: bold;
 }
 
-form input[type="text"],
-form textarea {
+input[type="text"],
+textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-sizing: border-box;
+  margin-top: 5px;
+  max-height: 200px;
+  resize: vertical;
+  overflow-y: auto;
 }
 
-form button {
-  margin-top: 10px;
-  margin-right: 20px;
+button {
   padding: 10px 20px;
   background-color: #c1c1c1;
   color: white;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-form button:hover {
+.back-button {
+  margin-left: 20px;
+}
+
+button:hover {
   background-color: #ababab;
 }

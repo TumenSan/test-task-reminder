@@ -1,24 +1,32 @@
 <form>
-  <div>
-    <label>Дата и время создания:</label>
-    <input type="text" [(ngModel)]="reminder.creationDateTime" name="creationDateTime">
+  <div class="row">
+    <div>
+      <label>Дата и время создания:</label>
+      <input type="text" [(ngModel)]="reminder.creationDateTime" name="creationDateTime">
+    </div>
+    <div>
+      <label>Дата и время выполнения:</label>
+      <input type="text" [(ngModel)]="reminder.completionDateTime" name="completionDateTime">
+    </div>
+    <div>
+      <label>Статус:</label>
+      <input type="text" [(ngModel)]="reminder.status" name="status">
+    </div>
   </div>
-  <div>
-    <label>Дата и время выполнения:</label>
-    <input type="text" [(ngModel)]="reminder.completionDateTime" name="completionDateTime">
+  <div class="row">
+    <div class="full-width">
+      <label>Краткое описание:</label>
+      <input type="text" [(ngModel)]="reminder.shortDescription" name="shortDescription">
+    </div>
   </div>
-  <div>
-    <label>Статус:</label>
-    <input type="text" [(ngModel)]="reminder.status" name="status">
+  <div class="row">
+    <div class="full-width">
+      <label>Полное описание:</label>
+      <textarea [(ngModel)]="reminder.fullDescription" name="fullDescription"></textarea>
+    </div>
   </div>
-  <div>
-    <label>Краткое описание:</label>
-    <input type="text" [(ngModel)]="reminder.shortDescription" name="shortDescription">
+  <div class="row">
+    <button class="save-button" (click)="saveChanges()">Сохранить</button>
+    <button class="back-button" (click)="goBack()">Назад</button>
   </div>
-  <div>
-    <label>Полное описание:</label>
-    <textarea [(ngModel)]="reminder.fullDescription" name="fullDescription"></textarea>
-  </div>
-  <button (click)="saveChanges()">Сохранить</button>
-  <button (click)="goBack()">Назад</button>
 </form>
