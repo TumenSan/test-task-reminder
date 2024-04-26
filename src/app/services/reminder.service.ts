@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Reminder } from '../models/reminder.model';
+import { ReminderStatus } from '../models/status.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class ReminderService {
   private reminders: Reminder[] = [
     {
       id: 1,
-      status: { name: 'Новый' },
+      status: ReminderStatus.New,
       shortDescription: 'Купить продукты',
       fullDescription: 'Купить продукты',
       creationDateTime: new Date('April 24, 2024 10:00:00'),
@@ -17,7 +18,7 @@ export class ReminderService {
     },
     {
       id: 2,
-      status: { name: 'Исполнен' },
+      status: ReminderStatus.Completed,
       shortDescription: 'Сделать уроки',
       fullDescription: 'Купить продукты',
       creationDateTime: new Date('April 24, 2024 10:00:00'),
@@ -25,7 +26,7 @@ export class ReminderService {
     },
     {
       id: 3,
-      status: { name: 'Исполнен' },
+      status: ReminderStatus.Completed,
       shortDescription: 'Сделать уроки',
       fullDescription: 'Купить продукты',
       creationDateTime: new Date('April 24, 2024 10:00:00'),
@@ -33,7 +34,7 @@ export class ReminderService {
     },
     {
       id: 4,
-      status: { name: 'Исполнен' },
+      status: ReminderStatus.Completed,
       shortDescription: 'Сделать уроки',
       fullDescription: 'Купить продукты',
       creationDateTime: new Date('April 24, 2024 10:00:00'),
@@ -41,7 +42,7 @@ export class ReminderService {
     },
     {
       id: 5,
-      status: { name: 'Исполнен' },
+      status: ReminderStatus.Completed,
       shortDescription: 'Сделать уроки',
       fullDescription: 'Купить продукты',
       creationDateTime: new Date('April 24, 2024 10:00:00'),

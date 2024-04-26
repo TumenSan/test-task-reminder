@@ -5,3 +5,10 @@ export class Status {
     this.name = name;
   }
 }
+
+export enum ReminderStatus {
+  New = 'Новый',
+  Completed = 'Исполнен',
+  Planned = 'Запланирован',
+  Overdue = 'Просрочен'
+}
