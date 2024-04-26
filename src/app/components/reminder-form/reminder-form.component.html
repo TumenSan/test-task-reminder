@@ -10,7 +10,12 @@
     </div>
     <div>
       <label>Статус:</label>
-      <input type="text" [(ngModel)]="reminder.status" name="status">
+      <select [(ngModel)]="reminder.status" name="status">
+        <option value="Новый">Новый</option>
+        <option value="Исполнен">Исполнен</option>
+        <option value="Запланирован">Запланирован</option>
+        <option value="Просрочен">Просрочен</option>
+      </select>
     </div>
   </div>
   <div class="row">

@@ -27,6 +27,33 @@ label {
   font-weight: bold;
 }
 
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  min-height: 35px;
+  max-height: 35px; /* Ограничиваем высоту, чтобы соответствовать другим элементам формы */
+  background-color: #fff; /* Фоновый цвет */
+  font-size: 14px; /* Размер шрифта */
+}
+
+select:hover,
+select:focus {
+  border-color: #666; /* Цвет рамки при наведении и фокусе */
+}
+
+option {
+  background-color: #fff; /* Фоновый цвет опций */
+  color: #333; /* Цвет текста опций */
+}
+
+option:hover {
+  background-color: #f0f0f0; /* Фоновый цвет при наведении на опцию */
+}
+
 input[type="text"],
 textarea {
   width: 100%;
@@ -35,6 +62,7 @@ textarea {
   border-radius: 3px;
   box-sizing: border-box;
   margin-top: 5px;
+  min-height: 35px;
   max-height: 200px;
   resize: vertical;
   overflow-y: auto;
