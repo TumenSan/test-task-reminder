@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
 import { Reminder } from '../../models/reminder.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ReminderService } from '../../services/reminder.service';
@@ -14,9 +15,7 @@ import { ReminderService } from '../../services/reminder.service';
 export class ReminderFormComponent {
   reminder!: Reminder;
 
-  constructor(private route: ActivatedRoute, private router: Router, private reminderService: ReminderService) {
-    // Получение напоминания из роута и инициализация данных для редактирования
-  }
+  constructor(private route: ActivatedRoute, private router: Router, private reminderService: ReminderService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe({

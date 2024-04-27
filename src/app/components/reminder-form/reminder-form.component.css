@@ -1,5 +1,5 @@
 form {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -52,6 +52,24 @@ option {
 
 option:hover {
   background-color: #f0f0f0; /* Фоновый цвет при наведении на опцию */
+}
+
+.date-input {
+  width: 180px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  min-height: 35px;
+  max-height: 35px; /* Ограничиваем высоту, чтобы соответствовать другим элементам формы */
+  background-color: #fff; /* Фоновый цвет */
+  font-size: 14px; /* Размер шрифта */
+}
+
+.date-input:hover,
+.date-input:focus {
+  border-color: #666; /* Цвет рамки при наведении и фокусе */
 }
 
 input[type="text"],

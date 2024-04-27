@@ -10,43 +10,43 @@ export class ReminderService {
   private reminders: Reminder[] = [
     {
       id: 1,
-      status: ReminderStatus.New,
+      status: ReminderStatus.Completed,
       shortDescription: 'Купить продукты',
-      fullDescription: 'Купить продукты',
-      creationDateTime: new Date('April 24, 2024 10:00:00'),
-      completionDateTime: new Date('April 25, 2024 10:00:00')
+      fullDescription: 'Купить сыр, масло, картошку',
+      creationDateTime: new Date('April 24, 2024 10:00'),
+      completionDateTime: new Date('April 25, 2024 10:00')
     },
     {
       id: 2,
-      status: ReminderStatus.Completed,
-      shortDescription: 'Сделать уроки',
-      fullDescription: 'Купить продукты',
-      creationDateTime: new Date('April 24, 2024 10:00:00'),
+      status: ReminderStatus.Planned,
+      shortDescription: 'Убраться',
+      fullDescription: 'Помыть пол, помыть окна, стены',
+      creationDateTime: new Date('April 23, 2024 10:00'),
       completionDateTime: new Date('April 25, 2024 10:00:00')
     },
     {
       id: 3,
       status: ReminderStatus.Completed,
-      shortDescription: 'Сделать уроки',
-      fullDescription: 'Купить продукты',
-      creationDateTime: new Date('April 24, 2024 10:00:00'),
-      completionDateTime: new Date('April 25, 2024 10:00:00')
+      shortDescription: 'Сходить в больницу',
+      fullDescription: 'Нужно быть на приеме у терапевта',
+      creationDateTime: new Date('April 22, 2024 10:00'),
+      completionDateTime: new Date('April 24, 2024 10:00')
     },
     {
       id: 4,
-      status: ReminderStatus.Completed,
-      shortDescription: 'Сделать уроки',
-      fullDescription: 'Купить продукты',
-      creationDateTime: new Date('April 24, 2024 10:00:00'),
-      completionDateTime: new Date('April 25, 2024 10:00:00')
+      status: ReminderStatus.Planned,
+      shortDescription: 'Сделать задания',
+      fullDescription: 'Решить задания по номерам',
+      creationDateTime: new Date('April 20, 2024 10:00'),
+      completionDateTime: new Date('April 25, 2024 10:00')
     },
     {
       id: 5,
-      status: ReminderStatus.Completed,
-      shortDescription: 'Сделать уроки',
-      fullDescription: 'Купить продукты',
-      creationDateTime: new Date('April 24, 2024 10:00:00'),
-      completionDateTime: new Date('April 25, 2024 10:00:00')
+      status: ReminderStatus.Overdue,
+      shortDescription: 'Отправить посылку',
+      fullDescription: 'Отправить посылку',
+      creationDateTime: new Date('April 23, 2024 10:00'),
+      completionDateTime: new Date('April 25, 2024 10:00')
     }
   ];
 
