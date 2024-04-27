@@ -34,7 +34,6 @@ export class ReminderListComponent {
   }
 
   openReminderForm(reminder: Reminder) {
-    console.log('Двойной щелчок на напоминании:', reminder);
     this.router.navigate(['/reminder', reminder.id]);
   }
 }

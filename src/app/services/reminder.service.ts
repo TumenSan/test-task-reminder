@@ -66,13 +66,13 @@ export class ReminderService {
   // Метод для сохранения или обновления напоминания
   saveReminder(reminder: Reminder): Observable<Reminder> {
     if (reminder.id) {
-      // Если у напоминания уже есть id, это обновление существующего напоминания
+      // Обновление существующего напоминания если у напом есть id
       const index = this.reminders.findIndex(r => r.id === reminder.id);
       if (index !== -1) {
         this.reminders[index] = reminder;
       }
     } else {
-      // Если у напоминания нет идентификатора, это создание нового напоминания
+      // Cоздание нового напоминания если у напоминания нет id
       reminder.id = this.generateUniqueId();
       this.reminders.push(reminder);
     }
