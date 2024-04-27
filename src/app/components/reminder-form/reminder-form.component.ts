@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { Reminder } from '../../models/reminder.model';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -8,7 +9,10 @@ import { ReminderService } from '../../services/reminder.service';
 @Component({
   selector: 'app-reminder-form',
   standalone: true,
-  imports: [ FormsModule ],
+  imports: [ 
+    FormsModule,
+    CommonModule
+  ],
   templateUrl: './reminder-form.component.html',
   styleUrl: './reminder-form.component.css'
 })

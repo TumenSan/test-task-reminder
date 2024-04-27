@@ -2,10 +2,12 @@
   <div class="row">
     <div>
       <label>Дата и время создания:</label>
+      <p class="date-time">{{ reminder.creationDateTime | date:'HH:mm dd/MM/yyyy' }}</p>
       <input type="datetime-local" [(ngModel)]="reminder.creationDateTime" name="creationDateTime" [ngModelOptions]="{standalone: true}" class="styled-input date-input">
     </div>
     <div>
       <label>Дата и время выполнения:</label>
+      <p class="date-time">{{ reminder.completionDateTime | date:'HH:mm dd/MM/yyyy' }}</p>
       <input type="datetime-local" [(ngModel)]="reminder.completionDateTime" name="completionDateTime" [ngModelOptions]="{standalone: true}" class="styled-input date-input">
     </div>
     <div>
