@@ -59,10 +59,7 @@ export class ReminderService {
 
   // Метод для получения напоминания по id
   getReminderById(id: number): Observable<Reminder | null> {
-    console.log(id);
-    console.log(this.reminders[0].fullDescription);
-    const reminder = this.reminders[0];
-
+    const reminder = this.reminders.find(r => r.id === id);
     return of(reminder ? reminder : null);
   }
 

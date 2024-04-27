@@ -20,7 +20,7 @@ export class ReminderFormComponent {
   ngOnInit(): void {
     this.route.params.subscribe({
       next: params => {
-        const id = params['id'];
+        const id: number = +params['id'];
         console.log('id: ', id);
         // Загрузка данных о напоминании из сервиса по id
         this.reminderService.getReminderById(id).subscribe({
