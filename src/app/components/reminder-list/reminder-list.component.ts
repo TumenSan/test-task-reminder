@@ -16,7 +16,10 @@ import { ReminderService } from '../../services/reminder.service';
 export class ReminderListComponent {
   reminders: Reminder[] = [];
 
-  constructor(private router: Router, private reminderService: ReminderService) { }
+  constructor(
+    private router: Router, 
+    private reminderService: ReminderService
+  ) { }
 
   ngOnInit(): void {
     this.loadReminders();
