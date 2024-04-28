@@ -11,8 +11,8 @@
       <tr *ngFor="let reminder of reminders" (dblclick)="openReminderForm(reminder)">
         <td>{{ reminder.status }}</td>
         <td>{{ reminder.shortDescription }}</td>
-        <td>{{ reminder.creationDateTime | date:'HH:mm dd/MM/yyyy'}}</td>
-        <td>{{ reminder.completionDateTime | date:'HH:mm dd/MM/yyyy'}}</td>
+        <td>{{ reminder.creationDateTime | date:'dd/MM/yyyy HH:mm'}}</td>
+        <td>{{ reminder.completionDateTime | date:'dd/MM/yyyy HH:mm'}}</td>
       </tr>
   </tbody>
 </table>
