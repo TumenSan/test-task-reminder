@@ -101,6 +101,14 @@ button {
   transition: background-color 0.3s;
 }
 
+/* Положение кнопок */
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 16px;
+}
+
 .back-button {
   margin-left: 20px;
 }

@@ -15,7 +15,7 @@ import { ReminderService } from '../../services/reminder.service';
     CommonModule,
     MatTableModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule // Импорт модуля иконок (опционально)
   ],
   templateUrl: './reminder-list.component.html',
   styleUrls: ['./reminder-list.component.css']
