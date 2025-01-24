@@ -1,31 +1,39 @@
-import { Component } from '@angular/core';
-import { Reminder } from '../../models/reminder.model';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
+import { Reminder } from '../../models/reminder.model';
 import { ReminderService } from '../../services/reminder.service';
 
 @Component({
   selector: 'app-reminder-list',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    MatTableModule,
+    MatButtonModule,
+    MatIconModule
   ],
   templateUrl: './reminder-list.component.html',
-  styleUrl: './reminder-list.component.css'
+  styleUrls: ['./reminder-list.component.css']
 })
-export class ReminderListComponent {
+export class ReminderListComponent implements OnInit {
   reminders: Reminder[] = [];
+  displayedColumns: string[] = ['status', 'shortDescription', 'creationDateTime', 'completionDateTime', 'actions']; // Добавлен столбец "actions"
 
   constructor(
-    private router: Router, 
+    private router: Router,
     private reminderService: ReminderService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.loadReminders();
   }
 
-  loadReminders() {
+  loadReminders(): void {
     this.reminderService.getAllReminders().subscribe({
       next: (data: Reminder[]) => {
         this.reminders = data;
@@ -36,7 +44,12 @@ export class ReminderListComponent {
     });
   }
 
-  openReminderForm(reminder: Reminder) {
+  openReminderForm(reminder: Reminder): void {
     this.router.navigate(['/reminder', reminder.id]);
+  }
+
+  deleteReminder(reminder: Reminder): void {
+    // Логика удаления напоминания
+    console.log('Delete reminder:', reminder);
   }
 }
