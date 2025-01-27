@@ -7,6 +7,11 @@ form {
   background-color: #f9f9f9;
 }
 
+.table-wrapper {
+  margin: 20px auto;
+  padding: 20px;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;

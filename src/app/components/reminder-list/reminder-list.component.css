@@ -28,3 +28,8 @@ tr:hover {
 .mat-column-shortDescription {
   width: 35%;
 }
+
+.table-wrapper {
+  margin: 20px auto;
+  padding: 20px;
+}

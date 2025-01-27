@@ -1,39 +1,41 @@
-<form>
-  <div class="row">
-    <div>
-      <label>Дата и время создания:</label>
-      <p class="date-time">{{ displayedCreationDateTime | date:'dd/MM/yyyy HH:mm' }}</p>
-      <input type="datetime-local" [(ngModel)]="reminder.creationDateTime" name="creationDateTime" [ngModelOptions]="{standalone: true}" class="styled-input date-input">
+<div class="table-wrapper">
+  <form>
+    <div class="row">
+      <div>
+        <label>Дата и время создания:</label>
+        <p class="date-time">{{ displayedCreationDateTime | date:'dd/MM/yyyy HH:mm' }}</p>
+        <input type="datetime-local" [(ngModel)]="reminder.creationDateTime" name="creationDateTime" [ngModelOptions]="{standalone: true}" class="styled-input date-input">
+      </div>
+      <div>
+        <label>Дата и время выполнения:</label>
+        <p class="date-time">{{ displayedCompletionDateTime | date:'dd/MM/yyyy HH:mm' }}</p>
+        <input type="datetime-local" [(ngModel)]="reminder.completionDateTime" name="completionDateTime" [ngModelOptions]="{standalone: true}" class="styled-input date-input">
+      </div>
+      <div>
+        <label>Статус:</label>
+        <select [(ngModel)]="reminder.status" name="status">
+          <option value="Новый">Новый</option>
+          <option value="Исполнен">Исполнен</option>
+          <option value="Запланирован">Запланирован</option>
+          <option value="Просрочен">Просрочен</option>
+        </select>
+      </div>
     </div>
-    <div>
-      <label>Дата и время выполнения:</label>
-      <p class="date-time">{{ displayedCompletionDateTime | date:'dd/MM/yyyy HH:mm' }}</p>
-      <input type="datetime-local" [(ngModel)]="reminder.completionDateTime" name="completionDateTime" [ngModelOptions]="{standalone: true}" class="styled-input date-input">
+    <div class="row">
+      <div class="full-width">
+        <label>Краткое описание:</label>
+        <input type="text" [(ngModel)]="reminder.shortDescription" name="shortDescription">
+      </div>
     </div>
-    <div>
-      <label>Статус:</label>
-      <select [(ngModel)]="reminder.status" name="status">
-        <option value="Новый">Новый</option>
-        <option value="Исполнен">Исполнен</option>
-        <option value="Запланирован">Запланирован</option>
-        <option value="Просрочен">Просрочен</option>
-      </select>
+    <div class="row">
+      <div class="full-width">
+        <label>Полное описание:</label>
+        <textarea [(ngModel)]="reminder.fullDescription" name="fullDescription"></textarea>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="full-width">
-      <label>Краткое описание:</label>
-      <input type="text" [(ngModel)]="reminder.shortDescription" name="shortDescription">
+    <div class="row">
+      <button class="save-button" (click)="saveChanges()">Сохранить</button>
+      <button class="back-button" (click)="goBack()">Назад</button>
     </div>
-  </div>
-  <div class="row">
-    <div class="full-width">
-      <label>Полное описание:</label>
-      <textarea [(ngModel)]="reminder.fullDescription" name="fullDescription"></textarea>
-    </div>
-  </div>
-  <div class="row">
-    <button class="save-button" (click)="saveChanges()">Сохранить</button>
-    <button class="back-button" (click)="goBack()">Назад</button>
-  </div>
-</form>
+  </form>
+</div>
