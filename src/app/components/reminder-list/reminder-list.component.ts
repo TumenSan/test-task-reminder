@@ -22,7 +22,7 @@ import { ReminderService } from '../../services/reminder.service';
 })
 export class ReminderListComponent implements OnInit {
   reminders: Reminder[] = [];
-  displayedColumns: string[] = ['status', 'shortDescription', 'creationDateTime', 'completionDateTime', 'actions']; // Добавлен столбец "actions"
+  displayedColumns: string[] = ['status', 'shortDescription', 'creationDateTime', 'completionDateTime'];
 
   constructor(
     private router: Router,
