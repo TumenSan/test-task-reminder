@@ -6,6 +6,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Каждая опеределенная задача открывается на своем id как например http://localhost:4200/reminder/1
 
+![Demo](./show-1.gif)
+
+Редактирование записи
+
+![Demo](./show-2.gif)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
