@@ -24,3 +24,7 @@ tr:nth-child(even) {
 tr:hover {
   background-color: #ddd;
 }
+
+.mat-column-shortDescription {
+  width: 35%;
+}
