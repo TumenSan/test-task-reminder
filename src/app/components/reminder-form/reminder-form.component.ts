@@ -5,13 +5,15 @@ import { CommonModule } from '@angular/common';
 import { Reminder } from '../../models/reminder.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ReminderService } from '../../services/reminder.service';
+import { DefaultButtonComponent } from '../atoms/default-button/default-button.component';
 
 @Component({
   selector: 'app-reminder-form',
   standalone: true,
   imports: [ 
     FormsModule,
-    CommonModule
+    CommonModule,
+    DefaultButtonComponent
   ],
   templateUrl: './reminder-form.component.html',
   styleUrl: './reminder-form.component.css'
