@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 import { Reminder } from '../../models/reminder.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ReminderService } from '../../services/reminder.service';
 import { DefaultButtonComponent } from '../atoms/default-button/default-button.component';
+import { DefaultModuleButtonModule } from '../atoms/default-module-button/default-module-button.module';
 
 @Component({
   selector: 'app-reminder-form',
@@ -13,7 +15,8 @@ import { DefaultButtonComponent } from '../atoms/default-button/default-button.c
   imports: [ 
     FormsModule,
     CommonModule,
-    DefaultButtonComponent
+    DefaultButtonComponent,
+    DefaultModuleButtonModule
   ],
   templateUrl: './reminder-form.component.html',
   styleUrl: './reminder-form.component.css'
